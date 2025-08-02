@@ -1,7 +1,8 @@
 # 🌌 Trivia Quiz Game 🚀  
 A feature-rich, galaxy-themed trivia quiz web app built with **HTML, CSS & JavaScript** — including lifelines, sounds, multiplayer mode, and an animated 8K galaxy background.
 
-![Trivia Banner](https://raw.githubusercontent.com/Chirashri/Trivia-Quiz-Game/main/banner.png)
+![Trivia Banner](<img width="1854" height="869" alt="Screenshot 2025-08-02 200452" src="https://github.com/user-attachments/assets/07b6a2bb-37a0-49d9-a08e-51907d945cea" />
+)
 
 ---
 
@@ -20,7 +21,7 @@ A feature-rich, galaxy-themed trivia quiz web app built with **HTML, CSS & JavaS
 
 ## 🖥️ Live Demo
 
-[🔗 View Live on GitHub Pages](https://chirashri.github.io/Trivia-Quiz-Game/)
+[🔗 View Live and Play on GitHub Pages](https://chirashri.github.io/Trivia-Quiz-Game/)
 
 ---
 
