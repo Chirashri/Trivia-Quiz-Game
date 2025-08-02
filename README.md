@@ -26,7 +26,10 @@ A feature-rich, galaxy-themed trivia quiz web app built with **HTML, CSS & JavaS
 ## 📸 Screenshots
 
 > Galaxy-themed design with interactive UI
+
 > [UI](https://github.com/Chirashri/Trivia-Quiz-Game/blob/main/UI.png)
+
+>
 
 
 ---
