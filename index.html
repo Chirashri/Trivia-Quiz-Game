@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trivia Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Add this for better font style -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Galaxy Background Canvas Layer -->
+  <div id="particles-js"></div>
+
+  <!-- Main Quiz Container -->
+  <div class="quiz-container">
+    <h1>🧠 Trivia Quiz Game</h1>
+    <button id="theme-toggle">🌙 </button>
+   
+
+    <input type="text" id="player-name" placeholder="Enter your name" />
+    <p id="name-error" style="color:red;"></p>
+
+    <audio id="sound-correct" src="correct.mp3" preload="auto"></audio>
+    <audio id="sound-wrong" src="wrong.mp3" preload="auto"></audio>
+
+    <!-- START SCREEN -->
+    <div id="settings" class="settings">
+      <label>Category:
+        <select id="category">
+          <option value="">Any</option>
+          <option value="9">General Knowledge</option>
+          <option value="21">Sports</option>
+          <option value="23">History</option>
+        </select> 
+      </label>
+
+      <label>Difficulty:
+        <select id="difficulty">
+          <option value="">Any</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    
+
+    <!-- QUIZ SCREEN -->
+    <div id="quiz" class="hidden">
+      <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+      </div>
+      <p id="question-number"></p>
+      <h2 id="question"></h2>
+      <p id="meta-info" class="meta"></p>
+      <p id="timer" class="meta"></p>
+
+
+      <ul id="answers"></ul>
+      <button id="next-btn" class="hidden">Next</button>
+      <button id="back-to-settings-from-quiz">⬅ Back</button>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div id="result" class="hidden">
+      <!-- <h2>Your Score: <span id="score"></span>/5</h2> -->
+       <h2>Your Score: <span id="score"></span></h2>
+
+      <!-- <p>🏆 High Score: <span id="high-score">0</span>/5</p> -->
+       <p>🏆 High Score: <span id="high-score">0</span></p>
+
+      <h3>🎖️ Leaderboard:</h3>
+      <ol id="leaderboard-list"></ol>
+      <button onclick="restartQuiz()">Play Again</button>
+      <button id="back-to-settings-from-result">⬅ Back to Setup</button>
+      <button id="clear-leaderboard" class="reset-button">Clear Leaderboard</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+  <!-- Load particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 100,
+          "density": {
+            "enable": true,
+            "value_area": 1200
+          }
+        },
+        "color": {
+          "value": ["#ffffff", "#00f7ff", "#ff00cc", "#ffea00"]
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.6,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 0.5,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 2,
+            "size_min": 0.2,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 120,
+          "color": "#ffffff",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 0.5,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": false
+          }
+        },
+        "modes": {
+          "repulse": {
+            "distance": 100,
+            "duration": 0.4
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
