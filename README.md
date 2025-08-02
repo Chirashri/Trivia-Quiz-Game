@@ -19,7 +19,7 @@ A feature-rich, galaxy-themed trivia quiz web app built with **HTML, CSS & JavaS
 
 ## 🖥️ Live Demo
 
-[🔗 View Live and Play on GitHub Pages](https://chirashri.github.io/Trivia-Quiz-Game/)
+### 🎮 [Play Live Here](https://chirashri.github.io/Trivia-Quiz-Game/)
 
 ---
 
